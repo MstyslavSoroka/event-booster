@@ -1,0 +1,66 @@
+#postsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.event-card {
+    width: 280px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #111;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.event-image {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.event-date {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.event-info {
+    padding: 15px;
+}
+
+.event-info h2 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #ff00ff;
+}
+
+.event-info p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.posts use{
+    fill: white;
+    width: 20px !important;
+    height: 20px !important;
+    margin-right: 5px;
+    display: inline;
+}
+.posts svg {
+    fill: white;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    display: inline;
+}
