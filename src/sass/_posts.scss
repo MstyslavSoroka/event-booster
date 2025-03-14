@@ -1,28 +1,51 @@
 #postsContainer {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 20px 160px;
     justify-content: center;
+    @media screen and (max-width: 768px) {
+        gap: 20px 25px;
+    }
+    @media screen and (max-width: 480px) {
+        gap: 20px 10px;  
+        .event-image {
+            height: 160px;
+            width: 130px;
+        }    
+        .event-card {
+            width: 130px;
+        }  
+        .event-info h2 {
+            font-size: 14px;
+        }
+        .event-info p {
+            font-size: 12px;
+        }
+        .post-line{
+            width: 100px;
+            height: 100px;
+        }
+    }
 }
 
 .event-card {
-    width: 280px;
-    border-radius: 20px;
-    overflow: hidden;
-    background: #111;
+    width: 180px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: none;
     color: white;
     text-align: center;
     font-family: Arial, sans-serif;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
 }
 
 .event-image {
-    height: 180px;
+    height: 227px;
     background-size: cover;
     background-position: center;
     position: relative;
     border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .event-date {
@@ -33,6 +56,7 @@
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 14px;
+    font-weight: 400;
 }
 
 .event-info {
@@ -48,6 +72,7 @@
 .event-info p {
     font-size: 14px;
     margin: 5px 0;
+    font-weight: 600;
 }
 
 .posts use{
@@ -63,4 +88,17 @@
     height: 20px;
     margin-right: 5px;
     display: inline;
+}
+
+.post-line{
+    background: none;
+    border: 1px solid #DC56C54D;
+    position: absolute;
+    z-index: 100;
+    width: 150px;
+    height: 150px;
+    top: -10px; 
+    right: -10px; 
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }

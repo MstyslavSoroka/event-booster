@@ -3,3 +3,16 @@
 body {
   background-image: url(../img/bg.jpg);
 }
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1200px;
+  @media screen and (max-width: 768px) {
+    width: 610px;
+  }
+  @media screen and (max-width: 480px) {
+    width: 100%;
+  }
+}

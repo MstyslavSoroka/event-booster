@@ -17,6 +17,7 @@ export async function renderPosts(posts) {
         postElement.classList.add('event-card');
         postElement.innerHTML = `
         <div class="event-image" style="background-image: url('${imageUrl}');"></div>
+        <div class="post-line"></div>
         <div class="event-info">
             <h2>${eventName}</h2>
             <p>${eventDate}</p>
