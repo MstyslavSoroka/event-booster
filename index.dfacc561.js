@@ -46,5 +46,5 @@ async function e(e){let n=document.getElementById("postsContainer");if(n.innerHT
         </div>
         <button class="modal-more">More from this author</button>
       </div>
-      `,E.querySelector(".close-modal").addEventListener("click",o),function(){let e=document.querySelector(".overlay");document.body.classList.add("no-scroll"),e.classList.add("overlay-visible")}(),console.log(`Card ID: ${f}`)})}),document.addEventListener("keydown",e=>{"Escape"===e.key&&o()})}(async function e(e){var n;let d=await fetch(`https://app.ticketmaster.com/discovery/v2/events.json?size=20&apikey=${e}`);return null===(n=(await d.json())._embedded)||void 0===n?void 0:n.events})("Z0jpFmdgR3VO2MAgupFCQ1c6yNovbVdi").then(d=>{e(d),n()});
-//# sourceMappingURL=index.a11f7e43.js.map
+      `,E.querySelector(".close-modal").addEventListener("click",o),function(){let e=document.querySelector(".overlay");document.body.classList.add("no-scroll"),e.classList.add("overlay-visible")}(),console.log(`Card ID: ${f}`)})}),document.addEventListener("keydown",e=>{"Escape"===e.key&&o()})}(async function e(e){var n;let d=await fetch(`https://app.ticketmaster.com/discovery/v2/events.json?size=20&apikey=${e}`),o=await d.json();return console.log(o),null===(n=o._embedded)||void 0===n?void 0:n.events})("Z0jpFmdgR3VO2MAgupFCQ1c6yNovbVdi").then(d=>{e(d),n()});
+//# sourceMappingURL=index.dfacc561.js.map
