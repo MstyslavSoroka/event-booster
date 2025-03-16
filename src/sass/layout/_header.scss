@@ -1,0 +1,44 @@
+body {
+  background-image: url('../img/mobile-background.png');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.header-title {
+  text-align: center;
+  color: #dc56c5;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 900;
+}
+@media (min-width: 768px) {
+  .header {
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+  }
+  body {
+    background-image: url('../img/tablet-background.png');
+  }
+  .header-title {
+    font-size: 30px;
+    margin-left: 50px;
+    text-align: center;
+  }
+}
+@media (min-width: 1400px) {
+  .header {
+    align-items: center;
+    width: 100%;
+  }
+
+  .header-title {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #dc56c5;
+    font-size: 50px;
+    margin-left: 400px;
+    width: 100%;
+  }
+}
