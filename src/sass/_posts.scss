@@ -1,0 +1,104 @@
+#postsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 160px;
+    justify-content: center;
+    @media screen and (max-width: 768px) {
+        gap: 20px 25px;
+    }
+    @media screen and (max-width: 480px) {
+        gap: 20px 10px;  
+        .event-image {
+            height: 160px;
+            width: 130px;
+        }    
+        .event-card {
+            width: 130px;
+        }  
+        .event-info h2 {
+            font-size: 14px;
+        }
+        .event-info p {
+            font-size: 12px;
+        }
+        .post-line{
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
+
+.event-card {
+    width: 180px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: none;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+.event-image {
+    height: 227px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.event-date {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.event-info {
+    padding: 15px;
+}
+
+.event-info h2 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #ff00ff;
+}
+
+.event-info p {
+    font-size: 14px;
+    margin: 5px 0;
+    font-weight: 600;
+}
+
+.posts use{
+    fill: white;
+    width: 20px !important;
+    height: 20px !important;
+    margin-right: 5px;
+    display: inline;
+}
+.posts svg {
+    fill: white;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    display: inline;
+}
+
+.post-line{
+    background: none;
+    border: 1px solid #DC56C54D;
+    position: absolute;
+    z-index: 100;
+    width: 150px;
+    height: 150px;
+    top: -10px; 
+    right: -10px; 
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
