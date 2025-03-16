@@ -1,7 +1,9 @@
-body {
+.background-img {
   background-image: url('../img/mobile-background.png');
   background-size: cover;
   background-position: top;
+  min-height: 100vh;
+  overflow: hidden;
   background-repeat: no-repeat;
 }
 .header-title {
@@ -17,7 +19,7 @@ body {
     // justify-content: center;
     align-items: center;
   }
-  body {
+  .background-img {
     background-image: url('../img/tablet-background.png');
   }
   .header-title {
@@ -27,6 +29,9 @@ body {
   }
 }
 @media (min-width: 1400px) {
+  .background-img {
+    background-image: url('../img/desktop-background.png');
+  }
   .header {
     align-items: center;
     width: 100%;
