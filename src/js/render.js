@@ -1,21 +1,23 @@
 export async function renderPosts(posts) {
-    const postsContainer = document.getElementById('postsContainer');
-    postsContainer.innerHTML = '';
+  const postsContainer = document.getElementById('postsContainer');
+  postsContainer.innerHTML = '';
 
-    if (posts.length === 0) {
-        postsContainer.innerHTML = '<p>Немає доступних подій.</p>';
-        return;
-    }
+  if (posts.length === 0) {
+    postsContainer.innerHTML = '<p>Немає доступних подій.</p>';
+    return;
+  }
 
-    posts.forEach(post => {
-        const imageUrl = post.images?.[0]?.url;
-        const eventName = post.name;
-        const eventDate = post.dates?.start?.localDate;
-        const eventLocation = post._embedded?.venues?.[0]?.name ;
+  posts.forEach(post => {
+    const imageUrl = post.images?.[0]?.url;
+    const eventName = post.name;
+    const eventDate = post.dates?.start?.localDate;
+    const eventLocation = post._embedded?.venues?.[0]?.name;
+    const id = post.id;
 
-        const postElement = document.createElement('div');
-        postElement.classList.add('event-card');
-        postElement.innerHTML = `
+    const postElement = document.createElement('div');
+    postElement.classList.add('event-card');
+    postElement.dataset.id = `${id}`;
+    postElement.innerHTML = `
         <div class="event-image" style="background-image: url('${imageUrl}');"></div>
         <div class="post-line"></div>
         <div class="event-info">
@@ -29,7 +31,7 @@ export async function renderPosts(posts) {
             </p>
         </div>
     `;
-    
-        postsContainer.appendChild(postElement);
-    });
+
+    postsContainer.appendChild(postElement);
+  });
 }
