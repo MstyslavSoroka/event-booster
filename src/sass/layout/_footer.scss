@@ -1,0 +1,41 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  color: #fff;
+  padding-bottom: 20px;
+}
+.pags {
+  display: flex;
+  gap: 10px;
+}
+.page {
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.page:hover {
+  color: #a855f7;
+}
+.active {
+  position: relative;
+  border: 2px solid #a855f7;
+  color: #a855f7;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-weight: bold;
+}
+.footer-logo {
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 900;
+  padding: 15px;
+}
+.rights {
+  color: #939393;
+  text-align: center;
+  padding: 15px;
+}
