@@ -1,5 +1,6 @@
 import { renderPosts } from './js/render.js';
 import { findPosts } from './js/findPosts.js';
+import { modal } from './js/modal.js';
 import { pagination } from './js/pagination.js';
 
 const apikey = 'Z0jpFmdgR3VO2MAgupFCQ1c6yNovbVdi';
@@ -17,3 +18,7 @@ async function loadPosts(currentPage) {
 }
 
 loadPosts(currentPage);
+findPosts(apikey).then(posts => {
+  renderPosts(posts);
+  modal();
+});
