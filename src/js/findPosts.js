@@ -3,6 +3,5 @@ export async function findPosts(apikey) {
     `https://app.ticketmaster.com/discovery/v2/events.json?size=20&apikey=${apikey}`
   );
   const data = await response.json();
-  console.log(data);
-  return data._embedded?.events;
+  return data._embedded?.events || [];
 }
