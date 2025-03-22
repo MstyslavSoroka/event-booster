@@ -1,4 +1,4 @@
-/* Global styles */
+
 body {
   background-color: #0D0D0D;
   margin: 0;
@@ -7,16 +7,15 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* Reset and Center */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Overlay */
+
 .overlay {
-  display: none; /* Hidden by default */
+  display: none; 
   position: fixed;
   top: 0;
   left: 0;
@@ -63,7 +62,6 @@ body {
   object-fit: cover; 
 }
 
-/* Close button */
 .close-modal {
   position: absolute;
   top: 20px;
@@ -80,13 +78,11 @@ body {
   transform: rotate(90deg);
 }
 
-/* Modal content wrapper */
 .modal-content-wrap {
   text-align: center;
   width: 100%;
 }
 
-/* Section headings */
 .modal-second-heading {
   color: #DC56C5;
   font-size: 20px;
@@ -94,21 +90,20 @@ body {
   margin: 15px 0 8px 0;
 }
 
-/* Paragraph content */
 .modal-content-wrap > p {
   font-size: 16px;
   line-height: 1.5;
 }
 
-/* Prices section */
+
 .prices div {
-  margin-top: 10px;
+
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Buy ticket button */
+
 .buy-btn {
   font-size: 16px;
   font-weight: 500;
@@ -169,7 +164,77 @@ body {
   }
 }
 
+.big-img-wrap {
+  display: none;
+}
+@media (min-width: 768px) {
+  .modal {
+    max-width: none;
+    width: 595px;
+    border-top-left-radius: 300px;
+    border-bottom-right-radius: 300px;
+  }
+  .round-img {
+    width: 70px;
+    height: 70px;
+  }
+  .modal-content-wrap {
+    text-align: left;
+  }
 
-@media (max-width: 480px) {
+  .modal-wrap {
+    display: flex;
+    gap: 30px;
+    padding-top: 43px;
+  }
+
+  .big-img-wrap {
+    display: block;
+  }
+
+  .big-img {
+    width: 233px;
+    height: 416px;
+    object-fit: cover;
+  }
+
+  .prices div {
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .modal {
+    width: 930px;
+    height: 1023px;
+  }
+  .round-img {
+    width: 132px;
+    height: 132px;
+  }
+
+  .modal-wrap {
+    gap: 60px;
+      }
+  .modal-content-wrap p {
+    font-size: 18px;
+  }
+
+  .big-img-wrap {
+    display: block;
+    padding-bottom: 45px;
+  }
+
+  .big-img {
+    width: 360px;
+    height: 641px;
+  }
+
+
+  .modal-second-heading {
+    font-size: 24px;
+    margin-top: 20px;
+  }
 
 }

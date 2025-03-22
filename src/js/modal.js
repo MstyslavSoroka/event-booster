@@ -22,7 +22,8 @@ export async function modal() {
 
       const event = events.find(event => event.id === cardId);
       const roundImage = event?.images.find(img => img.width === 205)?.url;
-      const bigImage = event?.images.find(img => img.width === 205)?.url;
+      const bigImage = event?.images.find(img => img.width === 640)?.url;
+      const url = event?.url;
       modal.innerHTML = `
       <button class="close-modal">✖</button>
       <img
@@ -30,6 +31,10 @@ export async function modal() {
         src="${roundImage}"
         alt="round img of the event"
       />
+      <div class="modal-wrap">
+      <div class="big-img-wrap">
+        <img class="big-img" src="${bigImage}" alt="big image of the event">
+      </div>
       <div class="modal-content-wrap">
         <h2 class="modal-second-heading">INFO</h2>
         <p>${event?.name || 'Event information not available'}</p>
@@ -55,15 +60,24 @@ export async function modal() {
           <h2 class="modal-second-heading">PRICES</h2>
           <div class="standart-price">
             <p>Standard: 300-500 UAH</p>
+            <a href="${url}">
             <button class="buy-btn">BUY TICKETS</button>
+            </a>
           </div>
           <div class="vip-price">
             <p>VIP: 1000-1500 UAH</p>
+            <a href="${url}">
             <button class="buy-btn">BUY TICKETS</button>
+             </a>
           </div>
         </div>
-        <button class="modal-more">More from this author</button>
+        </div>
+       
+        
       </div>
+       <div class="more-wrap">
+          <button class="modal-more">More from this author</button>
+        </div>
       `;
       modal.querySelector('.close-modal').addEventListener('click', modalClose);
       modalOpen();
