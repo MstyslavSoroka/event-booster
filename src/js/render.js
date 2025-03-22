@@ -4,11 +4,6 @@ export async function renderPosts(posts) {
   const postsContainer = document.getElementById('postsContainer');
   postsContainer.innerHTML = '';
 
-  if (posts.length === 0) {
-    postsContainer.innerHTML = '<p>Немає доступних подій.</p>';
-    return;
-  }
-
   posts.forEach(post => {
     const imageUrl = post.images?.[0]?.url || 'https://via.placeholder.com/300';
     const eventName = post.name || 'Невідома подія';
