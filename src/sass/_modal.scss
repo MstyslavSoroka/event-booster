@@ -25,6 +25,9 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  overflow-y: auto;
+  padding-top: 180px;
+  padding-bottom: 40px;
 }
 
 .overlay.overlay-visible {
@@ -168,6 +171,9 @@ body {
   display: none;
 }
 @media (min-width: 768px) {
+  .overlay{
+    padding-top: 220px;
+  }
   .modal {
     max-width: none;
     width: 595px;
@@ -204,7 +210,9 @@ body {
 }
 
 @media (min-width: 1200px) {
-
+  .overlay {
+    padding-top: 440px;
+  }
   .modal {
     width: 930px;
     height: 1023px;
