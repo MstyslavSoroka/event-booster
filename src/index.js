@@ -7,9 +7,15 @@ const apikey = 'Z0jpFmdgR3VO2MAgupFCQ1c6yNovbVdi';
 const elementsPerPage = 5;
 let currentPage = 1;
 
+const searchInput = document.getElementById('key-word');
+const countrySelect = document.getElementById('countries');
+
 findPosts(apikey).then(posts => {
   async function loadPosts(currentPage) {
-    const posts = await findPosts(apikey);
+    const keyword = searchInput.value;
+    const country = countrySelect.value;
+    const posts = await findPosts(apikey, keyword, country);
+
     const totalPages = Math.ceil(posts.length / elementsPerPage);
     const startIndex = (currentPage - 1) * elementsPerPage;
     const endIndex = currentPage * elementsPerPage;
@@ -17,8 +23,16 @@ findPosts(apikey).then(posts => {
     renderPosts(posts.slice(startIndex, endIndex));
     pagination(totalPages, currentPage, loadPosts);
 
-    modal();
+    modal(posts);
   }
 
   loadPosts(currentPage);
+
+  searchInput.addEventListener('input', () => {
+    loadPosts(currentPage);
+  });
+
+  countrySelect.addEventListener('change', () => {
+    loadPosts(currentPage);
+  });
 });
