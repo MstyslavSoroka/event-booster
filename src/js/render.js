@@ -20,7 +20,7 @@ export async function renderPosts(posts) {
         <div class="event-info">
             <h2>${eventName}</h2>
             <p>${eventDate}</p>
-            <p>
+            <p>  
                 <svg class="icon">
                     <use href="${symbolDefsUrl}#icon-place"></use>
                 </svg> 

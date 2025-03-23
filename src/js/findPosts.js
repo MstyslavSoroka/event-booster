@@ -1,8 +1,15 @@
-export async function findPosts(apikey) {
-  const response = await fetch(
-    `https://app.ticketmaster.com/discovery/v2/events.json?size=20&apikey=${apikey}`
-  );
+export async function findPosts(apikey, keyword = '', country = '') {
+  let url = `https://app.ticketmaster.com/discovery/v2/events.json?size=20&apikey=${apikey}`;
+
+  if (keyword) {
+    url += `&keyword=${encodeURIComponent(keyword)}`;
+  }
+
+  if (country) {
+    url += `&countryCode=${country}`;
+  }
+
+  const response = await fetch(url);
   const data = await response.json();
-  console.log(data);
   return data._embedded?.events || [];
 }
