@@ -1,3 +1,5 @@
+import { moreModal } from "./moreModal";
+
 export async function modal(posts) {
   const cards = document.querySelectorAll('.event-card');
 
@@ -57,11 +59,15 @@ export async function modal(posts) {
           </div>
         </div>
         <div class="more-wrap">
-          <button class="modal-more">More from this author</button>
+          <button class="modal-more" id ="moreOpen">More from this author</button>
         </div>
       `;
 
       modal.querySelector('.close-modal').addEventListener('click', modalClose);
+      modal.querySelector('#moreOpen').addEventListener('click', () => {
+        moreModal(event?._embedded?.attractions?.[0]?.name);
+      });
+      modal.querySelector('#moreOpen').addEventListener('click', modalClose);
       modalOpen();
       console.log(`Card ID: ${cardId}`);
     });
