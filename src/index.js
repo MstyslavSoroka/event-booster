@@ -4,7 +4,7 @@ import { modal } from './js/modal.js';
 import { pagination } from './js/pagination.js';
 
 const apikey = 'Z0jpFmdgR3VO2MAgupFCQ1c6yNovbVdi';
-const elementsPerPage = 5;
+const elementsPerPage = 10;
 let currentPage = 1;
 
 const searchInput = document.getElementById('key-word');
