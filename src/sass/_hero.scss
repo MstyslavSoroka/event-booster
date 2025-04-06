@@ -38,13 +38,10 @@
 }
 
 .countries option {
-    width: 100%;
-    padding: 10px 30px;
-    background-color: rgba(255, 255, 255, 0.2) !important;
-    backdrop-filter: blur(20px) !important;
-    border: none;
-    border-radius: 20px;
-    color: #939393;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgb(216, 194, 194);
     font-size: 16px;
+    padding: 10px 30px;
+    border-radius: 20px;
     cursor: pointer;
 }
